@@ -10,20 +10,25 @@
 <body>
 
     <script>
-        function mean(num) {
-            let counter = 0
-            let digit
-            let remainder
-            let sum = 0
-            while (digit > 0) {
-                digit = Math.floor(num / 10)
-                counter++
-                sum += digit
-                
-            }
+        function random() {
+            let value = Math.round(Math.random() * 9999) + 1
+            console.log(value);
+            return value
         }
-        let random = Math.round(Math.random() * 10000)
-        console.log(mean(random));
+        console.log(mean(random()))
+        function mean(num) {
+            num = String(num).split('')
+            console.log(num);
+            let s = 0
+            let counter = 0
+            let aver
+            for (let i = 0; i < num.length; i++) {
+                s += +num[i]
+                counter++
+            }
+            aver = s / counter
+            return aver
+        }
     </script>
 
 </body>
