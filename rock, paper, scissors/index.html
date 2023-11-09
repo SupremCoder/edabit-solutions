@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function rand() {
+            let arr = []
+            let p1
+            let p2
+            let signs = ['rock', 'paper', 'scissors']
+            let n = Math.floor(Math.random() * 3)
+            let m = Math.floor(Math.random() * 3)
+            console.log(n);
+            p1 = signs[n]
+            p2 = signs[m]
+            arr.push(p1, p2)
+            return arr
+        }
+        rand()
+        let random = rand()
+        console.log(random);
+        rps(random[0], random[1])
+        function rps(p1, p2) {
+            if (
+                (p1 == 'rock' && p2 == 'scissors') ||
+                (p1 == 'scissors' && p2 == 'paper') ||
+                (p1 == 'paper' && p2 == 'rock')
+            ) {
+                console.log("The winner is p1");
+            } else if (
+                (p2 == 'rock' && p1 == 'scissors') ||
+                (p2 == 'scissors' && p1 == 'paper') ||
+                (p2 == 'paper' && p1 == 'rock')
+            ) {
+                console.log("The winner is p2");
+            } else {
+                console.log("It's a draw");
+            }
+        }
+    </script>
+</body>
+
+</html>
