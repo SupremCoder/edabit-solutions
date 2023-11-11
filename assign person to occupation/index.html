@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const names = ['Sardor', 'Baxtiyor', 'Jonibek', 'Muhammad', 'Temur']
+        const jobs = ["dasturchi", "o\'qituvchi", "sotuvchi", "haydovchi", "hisobchi"]
+
+        const assignPersonToJob = (first, second) => {
+            return first.reduce((acc, val, ind) => {
+                acc[val] = second[ind]
+                return acc
+            }, {})
+        }
+        console.log(assignPersonToJob(names, jobs))
+
+    </script>
+</body>
+
+</html>
