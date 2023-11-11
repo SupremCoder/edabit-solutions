@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function random() {
+            let arr = []
+            // a = Math.round(Math.random() * 5)
+            // b = Math.round(Math.random() * 5)
+            // c = Math.round(Math.random() * 5)
+            a = +prompt('a = ')
+            b = +prompt('b = ')
+            c = +prompt('c = ')
+
+            arr.push(a, b, c)
+            return arr
+        }
+        let rand = random()
+        console.log(rand);
+        a = rand[0]
+        b = rand[1]
+        c = rand[2]
+        console.log(a, b, c);
+        matrix(a, b, c)
+        function matrix(x, y, z) {
+            let arr = []
+            for (let i = 0; i < x; i++) {
+                arr[i] = []
+                for (let j = 0; j < y; j++) {
+                    arr[i][j] = z
+                }
+            }
+            console.log(arr);
+        }
+    </script>
+</body>
+
+</html>
