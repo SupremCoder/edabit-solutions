@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let random = () => {
+            let arr = []
+            let n = Math.round(Math.random() * 4) + 2
+            for (let i = 0; i < n; i++) {
+                m = Math.round(Math.random() * 50)
+                arr[i] = m
+            }
+            return arr
+        }
+        console.log(random());
+        console.log(factorChain(random))
+        function factorChain(array) {
+            let bool = false
+            for (let i = 0; i < array.length - 1; i++)
+                if ((array[i + 1] % array[i]) != 0)
+                    bool = false
+                else bool = true
+            return bool
+        }
+    </script>
+</body>
+
+</html>
