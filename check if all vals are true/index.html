@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // function allTruthy(a, b, c) {
+
+        // }
+        // allTruthy(x, y, z)
+        let random = () => {
+            let arr = []
+            let n = Math.round(Math.random() * 10)
+            let m
+            let i = 0
+            while (i < n) {
+                m = (Math.round(Math.random() * 9) + 1) || null || false || "" || '' || NaN || undefined
+                arr[i] = m
+                i++
+            }
+            return arr
+        }
+        let rand = random()
+        console.log(rand);
+        function allTruthy(array) {
+            let arr = true
+            for (let i = 0; i < array.length; i++) {
+                // if (array[i] == null || array[i] == undefined || array[i] == NaN) arr = true
+                if (array[i] == false) arr = false
+                else arr = true
+            }
+            return arr
+        }
+        console.log(allTruthy(rand));
+
+    </script>
+</body>
+
+</html>
